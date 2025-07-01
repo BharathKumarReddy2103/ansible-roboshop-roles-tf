@@ -1,1 +1,2 @@
-MONGODB_HOST: "mongodb-{{ env }}.bharath2103.site"
+MONGODB_HOST: >-
+  {{ 'mongodb-' + env + '.bharath2103.site' if env else 'mongodb.bharath2103.site' }}
