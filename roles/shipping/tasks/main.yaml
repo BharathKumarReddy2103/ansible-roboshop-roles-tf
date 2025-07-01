@@ -1,0 +1,27 @@
+- name: app setup
+  include_role:
+    name: common
+    tasks_from: app-setup
+
+- name: maven setup
+  include_role:
+    name: common
+    tasks_from: maven
+
+- name: import data
+  community.mysql.mysql_db:
+    name: all
+    login_user: root
+    login_password: "{{ lookup('amazon.aws.aws_ssm', '/roboshop/mysql/mysql_root_password', region='us-east-1', decrypt=True) }}"
+    login_host: "{{ lookup('amazon.aws.aws_ssm', '/roboshop/mysql/mysql_host', region='us-east-1') }}"
+    state: import
+    target: "{{ item }}"
+  loop:
+  - /app/db/schema.sql
+  - /app/db/app-user.sql
+  - /app/db/master-data.sql
+
+- name: systemd setup
+  include_role:
+    name: common
+    tasks_from: systemd
