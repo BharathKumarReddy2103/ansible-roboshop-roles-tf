@@ -1,5 +1,5 @@
-CART_HOST: cart.bharath2103.site
-USER_HOST: user.bharath2103.site
-RABBITMQ_HOST: rabbitmq.bharath2103.site
+CART_HOST: cart.backend-{{ env }}.bharath2103.site
+USER_HOST: user.backend-{{ env }}.bharath2103.site
+RABBITMQ_HOST: rabbitmq-{{ env }}.bharath2103.site
 RABBITMQ_USER: roboshop
 RABBITMQ_PASSWORD: roboshop123
