@@ -1,2 +1,2 @@
-REDIS_HOST: redis.bharath2103.site
-MONGODB_HOST: mongodb.bharath2103.site
+REDIS_HOST: redis-{{ env }}.bharath2103.site
+MONGODB_HOST: mongodb-{{ env }}.bharath2103.site
