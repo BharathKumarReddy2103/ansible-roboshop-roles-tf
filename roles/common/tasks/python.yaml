@@ -13,7 +13,7 @@
     name:
       - boto3
       - botocore
-    executable: pip3
+    executable: pip3.9
 
 - name: install dependencies
   ansible.builtin.pip:
