@@ -3,7 +3,5 @@
   #hosts: "{{ component }}"
    hosts: localhost
    connection: local
-   vars:
-     ansible_python_interpreter: /usr/bin/python3.9
    roles: # this will automatically load a folder called roles in current working directory.
    - "{{ component }}"

@@ -6,14 +6,6 @@
   - python3 
   - gcc 
   - python3-devel
-  - python3-pip
-
-- name: install aws python libraries
-  ansible.builtin.pip:
-    name:
-      - boto3
-      - botocore
-    executable: pip3.9
 
 - name: install dependencies
   ansible.builtin.pip:
