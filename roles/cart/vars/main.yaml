@@ -1,2 +1,2 @@
-CATALOGUE_HOST: catalogue.backend-{{ env }}.bharath2103.site
-REDIS_HOST: redis-{{ env }}.bharath2103.site
+CATALOGUE_HOST: catalogue.backend-{{ env }}.bharath2103.online
+REDIS_HOST: redis-{{ env }}.bharath2103.online
