@@ -8,6 +8,13 @@
     name: common
     tasks_from: maven
 
+- name: Install boto3 and botocore
+  pip:
+    name:
+      - boto3
+      - botocore
+    executable: pip3
+
 - name: import data
   community.mysql.mysql_db:
     name: all
